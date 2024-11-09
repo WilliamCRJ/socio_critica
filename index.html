@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAPI</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 1200px;
+}
+
+#main-title {
+    font-size: 2em;
+    cursor: pointer;
+    transition: font-size 0.3s ease;
+}
+
+#main-title:hover {
+    font-size: 2.5em;
+}
+
+#sapi-definition {
+    margin-bottom: 20px;
+}
+
+.timeline {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    background-color: #333333;
+    border-radius: 50%;
+    margin: 10px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    transition: transform 0.3s ease, border 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.circle:hover {
+    transform: scale(1.2);
+    border: 2px solid #ffffff;
+}
+
+#card {
+    background-color: #333333;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.card-content {
+    display: flex;
+    align-items: center;
+    align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+}
+
+#card-image {
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+    transition: transform 0.3s ease;
+    border-radius: 30%;
+}
+
+.texto{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+#card-image:hover {
+    transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+    .timeline {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .circle {
+        margin: 10px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        display: flex;
+    }
+
+    #card-image {
+        margin: 0 0 20px 0;
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+
+.background-iframe {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.2; /* Ajusta la opacidad según sea necesario */
+    overflow: hidden;
+}
+
+.background-iframe iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300vw;
+    height: 300vh;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    border: none;
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    color: white; /* Ajusta el color del texto según sea necesario */
+    text-align: center;
+    padding: 20px;
+
+}
+
+
+    </style>
+</head>
+<body>
+
+    <div class="background-iframe">
+        <iframe src="https://giphy.com/embed/VRNBoJm3qN1lK" frameborder="0" class="giphy-embed" allowfullscreen></iframe>
+    </div>
+
+
+    <div class="container">
+        <h1 id="main-title">SAPI</h1>
+        <p id="sapi-definition">El Servicio Autónomo de la Propiedad Intelectual (SAPI) es el organismo encargado de la protección y gestión de los derechos de propiedad intelectual en Venezuela. Seleccione alguna de las siguientes opciones para ver información mas detallada: </p>
+        <div class="timeline">
+            <div class="circle" data-title="Organismo rector de la propiedad intelectual" data-content="El SAPI está bajo la supervisión del Ministerio del Poder Popular de Comercio Nacional. Algunas organizaciones internacionales relacionadas con la propiedad intelectual son:
+             OMPI (Organización Mundial de la Propiedad Intelectual: Promueve la protección de la propiedad intelectual en todo el mundo), 
+             WTO (Organización Mundial del Comercio: A través del Acuerdo sobre los ADPIC, regula aspectos de la propiedad intelectual relacionados con el comercio.),
+             EPO (Oficina Europea de Patentes: Gestiona las solicitudes de patentes en Europa)." data-image="https://img.freepik.com/vector-premium/gente-negocios-trabajando-trabajo-equipo-brainstroming-personaje_40876-1883.jpg?semt=ais_hybrid"> <img class="hidden" src="https://img.freepik.com/vector-premium/gente-negocios-trabajando-trabajo-equipo-brainstroming-personaje_40876-1883.jpg?semt=ais_hybrid" alt="imagen"> <h3>1</h3> </div>
+            
+            <div class="circle" data-title="Antecedentes" data-content="El SAPI fue creado mediante el Decreto N° 1.768 el 25 de marzo de 1997 y comenzó a funcionar el 1 de mayo de 1998. 
+            Su creación unificó la gestión de la propiedad industrial y el derecho de autor en una sola entidad, lo que permitió agilizar y optimizar los procesos de registro y protección de las creaciones intelectuales. 
+            Esta fusión ha facilitado la difusión del conocimiento y la innovación en Venezuela, proporcionando un marco legal robusto para la protección de los derechos de los creadores e inventores." data-image="https://media.istockphoto.com/id/1408025598/es/vector/solicite-ilustraciones-vectoriales-de-dibujos-animados-aislados-de-transcripci%C3%B3n-de-la.jpg?s=612x612&w=0&k=20&c=oULLGSq9PZP9rbVkIMgQ5gUl_5ieSgFc380ecW_ff5k="> <img class="hidden" src="https://media.istockphoto.com/id/1408025598/es/vector/solicite-ilustraciones-vectoriales-de-dibujos-animados-aislados-de-transcripci%C3%B3n-de-la.jpg?s=612x612&w=0&k=20&c=oULLGSq9PZP9rbVkIMgQ5gUl_5ieSgFc380ecW_ff5k=" alt="imagen"> <h3>2</h3> </div>
+            
+            <div class="circle" data-title="Objetivos" data-content="Los principales objetivos del SAPI son:
+
+             Fomentar el Desarrollo Científico y Técnico (Promover la innovación y el desarrollo tecnológico mediante la protección de las invenciones y creaciones), 
+             Proteger las Invenciones y Creaciones (Garantizar que los inventores y creadores puedan proteger y explotar sus obras e invenciones),
+             Garantizar la Difusión del Conocimiento (Facilitar el acceso a la información y el conocimiento, promoviendo un entorno de libre competencia y desarrollo económico),
+             Facilitar el Acceso a Bienes y Servicios (Asegurar que los consumidores tengan acceso a productos y servicios innovadores y de calidad, protegidos por derechos de propiedad intelectual)." data-image="https://img.freepik.com/vector-premium/concepto-logro-objetivos-dibujos-animados_388184-7.jpg"> <img class="hidden" src="https://img.freepik.com/vector-premium/concepto-logro-objetivos-dibujos-animados_388184-7.jpg" alt="imagen"> <h3>3</h3> </div>
+           
+            <div class="circle" data-title="Lineamientos" data-content="El SAPI se rige por una serie de leyes, decretos, reglamentos y tratados internacionales que establecen las normas para la protección de la propiedad intelectual. Algunos de los principales lineamientos incluyen:
+
+             Ley de Propiedad Industrial (Regula las patentes, marcas, diseños industriales y otros aspectos de la propiedad industrial),
+             Ley sobre el Derecho de Autor (Protege las obras literarias, artísticas y científicas),
+             Tratados Internacionales (Como el Convenio de París para la Protección de la Propiedad Industrial y el Convenio de Berna para la Protección de las Obras Literarias y Artísticas),
+             Reglamentos Internos (Normas específicas que detallan los procedimientos y requisitos para el registro y protección de los derechos de propiedad intelectual)." data-image="https://img.freepik.com/vector-premium/ilustracion-vectorial-personaje-dibujos-animados-graficos-leyes-reglamentos_516790-688.jpg"> <img class="hidden" src="https://img.freepik.com/vector-premium/ilustracion-vectorial-personaje-dibujos-animados-graficos-leyes-reglamentos_516790-688.jpg" alt="imagen"> <h3>4</h3> </div>
+           
+            <div class="circle" data-title="Fundamentos básicos de la propiedad intelectual" data-content="La propiedad intelectual abarca la propiedad industrial (patentes, marcas, diseños industriales) y el derecho de autor (obras literarias, artísticas y científicas), protegiendo las creaciones del intelecto humano." data-image="https://elenapeinador.com/wp-content/uploads/2018/10/cerebro-creativo-copywriting-e1540307928602.jpg.webp"> <img class="hidden" src="https://elenapeinador.com/wp-content/uploads/2018/10/cerebro-creativo-copywriting-e1540307928602.jpg.webp" alt="imagen"> <h3>5</h3> </div>
+            
+            <div class="circle" data-title="El derecho de autor" data-content="Este derecho protege las obras originales de carácter literario, artístico y científico, garantizando a los autores el control sobre el uso y explotación de sus obras." data-image="https://img.freepik.com/vector-premium/ilustracion-vectorial-personaje-dibujos-animados-graficos-derechos-autor_516790-414.jpg"> <img class="hidden" src="https://img.freepik.com/vector-premium/ilustracion-vectorial-personaje-dibujos-animados-graficos-derechos-autor_516790-414.jpg" alt="imagen"> <h3>6</h3> </div>
+            
+            <div class="circle" data-title="Proceso para formalizar una propiedad intelectual" data-content="Este proceso se conforma principalmente de los siguientes pasos:
+            1. Solicitud (Presentar una solicitud ante el SAPI con la documentación requerida),
+            2. Examen (El SAPI realiza un examen de forma y fondo para verificar el cumplimiento de los requisitos legales.),
+            3. Publicación (La solicitud se publica para permitir oposiciones),
+            4. Registro (Si no hay oposiciones o estas se resuelven a favor del solicitante, se procede al registro y emisión del título correspondiente)." data-image="https://img.freepik.com/vector-premium/icono-lista-procedimientos-estilo-comic-ilustracion-vector-dibujos-animados-proyecto-documento-sobre-fondo-blanco-aislado-concepto-negocio-efecto-salpicadura-lista-verificacion_157943-11339.jpg"> <img class="hidden" src="https://img.freepik.com/vector-premium/icono-lista-procedimientos-estilo-comic-ilustracion-vector-dibujos-animados-proyecto-documento-sobre-fondo-blanco-aislado-concepto-negocio-efecto-salpicadura-lista-verificacion_157943-11339.jpg" alt="imagen"> <h3>7</h3> </div>
+       
+        </div>
+        <div id="card" class="hidden">
+            <h2 id="card-title"></h2>
+            <div class="card-content">
+                <img id="card-image" src="" alt="">
+                <div class="texto"><p id="card-text"></p> </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const circles = document.querySelectorAll('.circle');
+    const card = document.getElementById('card');
+    const cardTitle = document.getElementById('card-title');
+    const cardImage = document.getElementById('card-image');
+    const cardText = document.getElementById('card-text');
+    const mainTitle = document.getElementById('main-title');
+
+
+
+    circles.forEach(circle => {
+        circle.addEventListener('click', () => {
+            const title = circle.getAttribute('data-title');
+            const content = circle.getAttribute('data-content');
+            const image = circle.getAttribute('data-image');
+
+            cardTitle.textContent = title;
+            cardText.textContent = content;
+          
+            cardImage.src = image;
+
+            card.classList.remove('hidden');
+            card.style.display = 'flex';
+        });
+    });
+
+    mainTitle.addEventListener('click', () => {
+        card.classList.add('hidden');
+        card.style.display = 'none';
+    });
+});
+
+    </script>
+</body>
+</html>
